@@ -1,0 +1,95 @@
+public class WhatsApp {
+    private ArrayList<Contato> contatos;
+    private final ArrayList<Mensagem> mensagens;
+
+    public WhatsApp() {
+        this.mensagens = new ArrayList<>();
+    }
+
+    public WhatsApp(ArrayList<Mensagem> mensagens) {
+        this.mensagens = mensagens;
+    }
+
+    public WhatsApp(ArrayList<Contato> contatos, ArrayList<Mensagem> mensagens) {
+        this.contatos = contatos;
+        this.mensagens = mensagens;
+    }
+    
+    public void listarContatos(){  
+    }
+    
+    public void listarMensagens(){
+    }
+    
+}
+
+public abstract class Mensagem {
+    private Contato destinatario;
+    private String horaEnvio;
+    private String conteudo;
+
+    public Mensagem() {
+    }
+
+    public Mensagem(Contato destinatario, String horaEnvio, String conteudo) {
+        this.destinatario = destinatario;
+        this.horaEnvio = horaEnvio;
+        this.conteudo = conteudo;
+    }
+
+    public String getConteudo() {
+        return conteudo;
+    }
+
+    public Contato getDestinatario() {
+        return destinatario;
+    }
+
+    public String getHoraEnvio() {
+        return horaEnvio;
+    }
+
+    public void setConteudo(String conteudo) {
+        this.conteudo = conteudo;
+    }
+
+    public void setDestinatario(Contato destinatario) {
+        this.destinatario = destinatario;
+    }
+
+    public void setHoraEnvio(String horaEnvio) {
+        this.horaEnvio = horaEnvio;
+    }
+    
+}
+
+public class Contato {
+    private String nome;
+    private String celular;
+
+    public Contato() {
+    }
+
+    public Contato(String nome, String celular) {
+        this.nome = nome;
+        this.celular = celular;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
+    
+    
+}
